@@ -6,10 +6,11 @@ import { CheckboxField } from "./fields/CheckboxField.tsx";
 import { DateField } from "./fields/DateField.tsx";
 import { Grid, Typography } from "@mui/material";
 import { useCallback } from "react";
-import validateStrings from "../validations/validateStrings.ts";
+// import validateStrings from "../validations/validateStrings.ts";
 import { StringValidator, NumericValidator } from "../types/validators.types.ts";
 import validateNumber from "../validations/validateNumber.ts";
 import { toast } from "react-toastify";
+import validateCustomStrings from "../validations/validateCustomStrings.ts";
 
 const fieldComponents = {
 	[FieldType.Number]: InputField,
@@ -34,7 +35,8 @@ export const FormView = () => {
 				errors = validateNumber(value, validations as NumericValidator)
 				break;
 			case FieldType.String: {
-				errors = validateStrings(value, validations as StringValidator)
+				// errors = validateStrings(value, validations as StringValidator)
+				errors = validateCustomStrings(value, validations as StringValidator)
 				break;
 			}
 		}
