@@ -1,3 +1,5 @@
+// These are the rules that are used to validate the string fields of the form using hard coded regex.
+// These options are used in a check box
 import extractKeys from "../utils/extractKeys"
 
 export const StringValidationRegex: Record<string, {regex: RegExp, message:string}> = {
@@ -20,4 +22,5 @@ export const StringValidationRegex: Record<string, {regex: RegExp, message:strin
     // ...add other validation regex here
 }
 
+// Extracts keys for the dropdown
 export const StringValidationOptions = extractKeys(StringValidationRegex)

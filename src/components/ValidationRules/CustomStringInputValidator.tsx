@@ -1,3 +1,4 @@
+// This component is used for string inputs with custom validations (regex input based validations)
 import { Button, Grid } from "@mui/material";
 import { FC, useState } from "react"
 import { StringValidator } from "../../types/validators.types";

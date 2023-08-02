@@ -15,7 +15,9 @@ export type Field = {
 	type: FieldType,
 	label: string,
 	value: string,
+	// added validations to the field
 	validations: FormValidator,
+	// contains errors for the field
 	errors: string[],
 }
 
@@ -43,6 +45,7 @@ export const formSlice = createSlice({
 				errors: []
 			}
 		},
+		// Updates the errors
 		updateErrors: (state: FormState, action: PayloadAction<{ key: string, errors: string[] }>) => {
 			const { key, errors } = action.payload
 			state.fields[key] = {

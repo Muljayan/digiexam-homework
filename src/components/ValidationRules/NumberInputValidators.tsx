@@ -1,3 +1,4 @@
+// This component is used for number inputs validations 
 import { Grid } from '@mui/material'
 import { InputField } from '../fields/InputField'
 import {  NumericValidator } from '../../types/validators.types'

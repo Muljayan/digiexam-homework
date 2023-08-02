@@ -1,5 +1,6 @@
 import { NumericValidator } from "../types/validators.types";
 
+// Validates a number field based on max and min values
 const validateNumber = (value: string, validations: NumericValidator): string[] => {
     const errors: string[] = [];
 

@@ -23,14 +23,13 @@ export const FormBuilder = () => {
 			return
 		}
 
+		// Validation to make sure the settings are correct
 		if (currentType === FieldType.Number) {
 			const numericValidations = validations as NumericValidator
 			if (numericValidations.min !== '' && numericValidations.max !== '' && parseInt(numericValidations.min) > parseInt(numericValidations.max)) {
 				toast("Min value cannot be greater than max value")
 				return
 			}
-
-
 		}
 
 
@@ -39,6 +38,7 @@ export const FormBuilder = () => {
 		}
 	}
 
+	// Sets initial state based on type, memoized to prevent unnecessary rerenders
 	const updateType = useCallback((type: string) => {
 		setCurrentType(type)
 		switch (type) {
@@ -85,7 +85,6 @@ export const FormBuilder = () => {
 				<Typography variant="h6" fontWeight={600} gutterBottom >
 					Validations
 				</Typography>
-
 
 				<ValidationRules
 					currentFieldType={currentType as FieldType}

@@ -1,3 +1,4 @@
+// This component is used for string inputs with predefined validations (checkbox based validations)
 import { FormGroup } from "@mui/material";
 import { FC } from "react"
 import { CheckboxField } from "../fields/CheckboxField";

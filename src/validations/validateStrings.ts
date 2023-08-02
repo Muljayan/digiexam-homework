@@ -1,6 +1,7 @@
 import { StringValidator } from "../types/validators.types";
 import { StringValidationRegex } from "./rules";
 
+// Validates a string against predfined regex validations
 const validateStrings = (value: string, validations: StringValidator) => {
     const errors: string[] = []
     validations.map((validation) => {
