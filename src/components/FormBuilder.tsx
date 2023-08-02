@@ -5,7 +5,7 @@ import { Button, Divider, Grid, Typography } from "@mui/material";
 import { InputField } from "./fields/InputField.tsx";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/config.ts";
-import ValidationRules from "./ValidationRules/index.tsx";
+import ValidationRules from "./validationRules";
 import { FormValidator, NumericValidator } from "../types/validators.types.ts";
 import { toast } from "react-toastify";
 
