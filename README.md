@@ -7,5 +7,6 @@
 - The updated validation uses an input field for users to add custom regex patterns
 
 
-### Additional functionality
+### Future functionality
 - Add date validation similar to number validation to ensure the date is within a range
+- Combine preset and custom validations
